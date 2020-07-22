@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<link rel= "stylesheet" type = "text/css" href="styles.css">
+
+<script  src="script.js"></script>
+<title>testWeb</title>
+</head>
+<body>
+  <nav id = "navi" class = "sticky">
+  <div id = "navHead">
+  
+    <h3>T0<h3>
+	</div>
+      <div id = "navList">
+	  
+	  
+        <ul >
+          <li><a href = "#top">Main</a></li>
+          <li><a href = "#example">Examples</a></li>
+          <li><a href = "#contact">Contact</a></li>
+        </ul>
+		
+        </div>
+		
+  </nav>
+      <div  id = "top" class = "content">
+	  <div id = "home" > 
+	  
+         <h2>Builder Profile </h2>
+		 <div id = "homeParent">
+		 <div id = "home1">
+		 <h5>Midwestern Web Developer</h5>
+		 <p>I build websites and applications with HTML/CSS, javaScript and Java.</p>
+		 <h4>Let me build for you today!</h4>
+		 </div>
+		 <div id = "home2">
+		 <div>
+		 <h4>Tayman Ott</h4>
+		 </div>
+		 <div id = "profilePic">
+		 <img src = "profile.jpg" height = "100%" width = "100%" >
+		 </div>
+		 </div>
+		 </div>
+		 </div>
+		 <div id = "example">
+		 <h2>Examples</h2>
+		 <div id = "codeSamples" >
+		  <script>
+		 function hideCode(){
+		 var getCo = document.getElementById("innerCode");
+		 if ( getCo.style.display === "none"){
+		 getCo.style.display = "grid";
+		 }
+		 else{
+		 getCo.style.display = "none";
+		 }
+		 
+		 }
+		 </script>
+		<div onclick = "hideCode()">
+		 <h5   >Code Samples</h5>
+		 
+		
+		 </div>
+		 <div id = "innerCode" >
+		 <div>
+		 <form id = "frm1" action = "">
+		 
+		 <label for = "num">Enter a number to be romanized</label><br>
+		 <input type = "number" id = "num" name = "num"><br>
+		 <input type = "button" onclick="retriever()" value="Submit">
+		 </form>
+		 <script>
+		 
+		 function retriever(){
+	 var m = document.getElementById("num").value;
+	 m = parseInt(m, 10);
+	 var f = m.toString();
+	 var g = isNaN(f);
+	
+	 if (g == true){
+	 
+	 document.getElementById("output1").innerHTML =  "Not a number!";
+	 }
+	 else {
+	  var digits = String(+m).split(""),
+	  key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
+	  "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC", 
+	  "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"], 
+	 roman = "",
+	 i = 3;
+	 while (i--)
+	 roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+	 
+	 
+	
+	 document.getElementById("output1").innerHTML = Array(+digits.join("") + 1).join("M") + roman + " in roman";
+	 }
+	   
+}
+
+		 </script>
+		 <p id = "output1"></p>
+		 </div>
+		 
+		 <div>
+		 <p>Compound Interest calculator</p>
+		 <form>
+		 <label for "initInvest"> Initial investment</label></br>
+		 <input type = "number" id = "initInvest" name = "initInvest"></br>
+		 <label for "monthlyCont">Monthly Contribution</label></br>
+		 <input type = "number" id = "monthlyCont" name = "monthlyCont"></br>
+		 <label for "lenOT">Length of time in years</label></br>
+		 <input type = "number" id = "lentOT" name = "lenOT"></br>
+		 <input type = "button" onclick = "compInCal()" value = "Submit">
+		 </form>
+		 <script>
+		 function compInCal(){
+		  var initIn = document.getElementById("initInvest").value;
+		   var monCont = document.getElementById("monthlyCont").value;
+		    var lenTime = document.getElementById("num").value;
+			for (var i = 0; i >= lenTime; i++){
+			
+			}
+		 }
+		 </script>
+		 <p id = "ouput2"></p>
+		 </div>
+		 
+		 </div>
+		 </div>
+		 <div id="overPics" >
+		 <script>
+		 function hideArt(){
+		 var getArt = document.getElementById("picLord");
+		 if ( getArt.style.display === "none"){
+		 getArt.style.display = "grid";
+		 }
+		 else{
+		 getArt.style.display = "none";
+		 }
+		 
+		 }
+		 
+		 </script>
+		 <div onclick = "hideArt()">
+		 
+		 <h5 >Aesthetic Samples</h5>
+		 </div>
+		 <div id = "picLord">
+		 <div>
+		 <img src = "examplelogo(1).png" height = "70%" width = "70%" border ="10px, solid" style = "border-radius: 4px;">
+		 </div>
+		 <div>
+		 <img src = "samplesite.png" height = "70%" width = "90%" border = "10px, solid" style = "border-radius: 4px;"> 
+		 </div>
+		 <div>
+		 <img src = "fiverBanner.png" height = "30%" width = "90%" border = "10px, solid" style = "border-radius: 4px;">
+		 </div>
+		 <div>
+		 <img src = "#" height = "80%" width = "60%" border =  "10px, solid" style = "border-radius: 4px;">
+		 </div>
+         </div>
+		 </div>
+		 </div>
+		 <div id = "contact">
+		 <h2>Contact Me</h2>
+		 <div id = "conForms">
+		 <div id = "gitHub">
+		 <p><a href = "#">gitHub</a></p>
+		 </div>
+		 <div id = "email">
+		 <p><a href = "#">Email</a></p>
+		 </div>
+		 <div id = "fiver">
+		 <p><a href = " https://www.fiverr.com/taymantoot">Fiverr</a></p>
+		 </div>
+		 </div>
+		 </div>
+        </div>
+</body>
+</html>
