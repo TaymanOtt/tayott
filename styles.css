@@ -1,6 +1,6 @@
 body{
-	
-background: #004400;
+background-image: url("BBZO9260.jpg");
+	background-size: 300px;
 }
 #navi{
 display: grid;
@@ -209,7 +209,7 @@ width: 80%;
 	text-align: center;
 }
 .content{
-		background-image: url("BBZO9260.jpg");
+	background-image: url("BBZO9260.jpg");
 	background-size: 300px;
 
   padding: 10px;
