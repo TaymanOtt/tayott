@@ -1,6 +1,6 @@
 body{
-background-image: url("BBZO9260.jpg");
-	background-size: 300px;
+	
+background: #004400;
 }
 #navi{
 display: grid;
@@ -70,7 +70,7 @@ border-radius: 9px;
 	text-align: center;
 }
 #codeSamples{
-	
+	padding: 10px;
 	color: #005500;
 	text-align:center;
 	border: 2px solid black;
@@ -78,10 +78,19 @@ border-radius: 9px;
 	margin-bottom: 10px;
 	background: #77aa77;
 }
-#codeSamples:hover{
-	background: #003300;
-	color: #77aa77;
+#codeSamples button:hover{
+	background: #559955;
+	color: #eeeeee;
 	
+}
+#codeSamples button{
+background-color: #557755;
+border: 2px solid black;
+color: white;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
 }
 #innerCode{
 	display: none;
@@ -94,16 +103,27 @@ border-radius: 9px;
 	height: 100%;
 }
 #overPics{
+	padding: 10px;
 	background: #77aa77;
 	color:#005500;
 	text-align: center;
 	border: 2px solid black;
 	border-radius: 3px;
-	bottom-margin: 0px;
+	margin: 0px;
 }
-#overPics:hover{
-	background: #003300;
-	color: #77aa77;
+#overPics button:hover {
+	background: #559955;
+	color: #eeeeee;
+
+}
+#overPics button{
+background-color: #557755;
+border: 2px solid black;
+color: white;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
 
 }
 #picLord{
@@ -137,7 +157,7 @@ background: #557755;
 }
 #home2{
 	display:grid;
-	grid-template-rows: 15% 85%;
+	
 	grid-template-columns: 100%;
 	background: #557755;
 	text-align:center;
@@ -209,7 +229,7 @@ width: 80%;
 	text-align: center;
 }
 .content{
-	background-image: url("BBZO9260.jpg");
+		background-image: url("BBZO9260.jpg");
 	background-size: 300px;
 
   padding: 10px;
