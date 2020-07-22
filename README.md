@@ -1,2 +1,0 @@
-# tayott
-Portfolio site
