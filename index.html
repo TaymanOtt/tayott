@@ -9,31 +9,31 @@
 <body>
   <nav id = "navi" class = "sticky">
   <div id = "navHead">
-  
+
     <h3>T0<h3>
 	</div>
       <div id = "navList">
-	  
-	  
+
+
         <ul >
           <li><a href = "#top">Main</a></li>
           <li><a href = "#example">Examples</a></li>
           <li><a href = "#contact">Contact</a></li>
         </ul>
-		
+
         </div>
-		
+
   </nav>
       <div  id = "top" class = "content">
-	  <div id = "home" > 
-	  
+	  <div id = "home" >
+
          <h2>Tayman Ott </h2>
 		 <div id = "homeParent">
 		 <div id = "home1">
 		<div id = "home11">
 		 <h5>Midwestern Web Developer</h5>
 		 <p>HTML/CSS & JavaScript</p>
-		
+
 </div>
 <div id = "tagLine">
 <div>
@@ -49,7 +49,7 @@
 </div>
 		 </div>
 		 <div id = "home2">
-		 
+
 		 <div id = "profilePic">
 		 <img src = "profile.jpg" height = "100%" width = "100%" >
 		 </div>
@@ -68,78 +68,81 @@
 		 else{
 		 getCo.style.display = "none";
 		 }
-		 
+
 		 }
 		 </script>
 		<div>
 		 <button onclick = "hideCode()">Code Samples</button>
-		 
-		
+
+
 		 </div>
 		 <div id = "innerCode" >
 		 <div>
-		
+
 		 <label for = "num">Enter a number to be romanized</label><br>
 		 <input type = "number" id = "num" name = "num"><br>
 		 <input type = "button" onclick="retriever()" value="Submit">
-		 
+
 		 <script>
-		 
+
 		 function retriever(){
 	 var m = document.getElementById("num").value;
 	 m = parseInt(m, 10);
 	 var f = m.toString();
 	 var g = isNaN(f);
-	
+
 	 if (g == true){
-	 
+
 	 document.getElementById("output1").innerHTML =  "Not a number!";
 	 }
 	 else {
 	  var digits = String(+m).split(""),
 	  key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
-	  "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC", 
-	  "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"], 
+	  "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC",
+	  "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
 	 roman = "",
 	 i = 3;
 	 while (i--)
 	 roman = (key[+digits.pop() + (i * 10)] || "") + roman;
-	 
-	 
-	
-	 document.getElementById("output1").innerHTML = Array(+digits.join("") + 1).join("M") + roman + " in roman";
+
+
+
+	 document.getElementById("output1").innerHTML =
+    Array(+digits.join("") + 1).join("M") + roman + " in roman";
 	 }
-	   
+
 }
 
 		 </script>
 		 <p id = "output1"></p>
 		 </div>
-		 
+
 		 <div>
 		 <p>Compound Interest calculator</p>
 		 <form>
 		 <label for "initInvest"> Initial investment</label></br>
 		 <input type = "number" id = "initInvest" name = "initInvest"></br>
-		 <label for "monthlyCont">Monthly Contribution</label></br>
-		 <input type = "number" id = "monthlyCont" name = "monthlyCont"></br>
-		 <label for "lenOT">Length of time in years</label></br>
+		 <label for "intRate">Interest Rate</label></br>
+		 <input type = "number" id = "intRate" name = "intRate"></br>
+		 <label for "lenOT">Length of time in compounding periods</label></br>
 		 <input type = "number" id = "lentOT" name = "lenOT"></br>
 		 <input type = "button" onclick = "compInCal()" value = "Submit">
 		 </form>
 		 <script>
 		 function compInCal(){
 		  var initIn = document.getElementById("initInvest").value;
-		   var monCont = document.getElementById("monthlyCont").value;
-		    var lenTime = document.getElementById("num").value;
-			for (var i = 0; i >= lenTime; i++){
-			
+		   var intRate = document.getElementById("intRate").value;
+		    var lenTime = document.getElementById("lentOT").value;
+      var CompInt =  initIn*(Math.pow((1+intRate),lenTime)+1);
+
+document.getElementById("output2").innerHTML = CompInt + " is your interest compounded.";
+
 			}
-		 }
-		 </script>
-		 <p id = "ouput2"></p>
-		 </div>
 		 
+		 </script>
+		 <p id = "output2"></p>
+		 </div>
+
 		 </div>
 		 </div>
 		 <div id="overPics" >
@@ -152,12 +155,12 @@
 		 else{
 		 getArt.style.display = "none";
 		 }
-		 
+
 		 }
-		 
+
 		 </script>
 		 <div >
-		 
+
 		 <button onclick = "hideArt()">Aesthetic Samples</button>
 		 </div>
 		 <div id = "picLord">
@@ -165,13 +168,13 @@
 		 <img src = "examplelogo(1).png" height = "70%" width = "70%" border ="10px, solid" style = "border-radius: 4px;">
 		 </div>
 		 <div>
-		 <img src = "samplesite.png" height = "70%" width = "90%" border = "10px, solid" style = "border-radius: 4px;"> 
+		 <img src = "samplesite.png" height = "70%" width = "90%" border = "10px, solid" style = "border-radius: 4px;">
 		 </div>
 		 <div>
 		 <img src = "fiverBanner.png" height = "30%" width = "90%" border = "10px, solid" style = "border-radius: 4px;">
 		 </div>
 		 <div>
-		 <img src = "#" height = "80%" width = "60%" border =  "10px, solid" style = "border-radius: 4px;">
+		 <img src = "libertyBikes.png" height = "80%" width = "60%" border =  "10px, solid" style = "border-radius: 4px;">
 		 </div>
          </div>
 		 </div>
